@@ -54,7 +54,7 @@ Please setup your Mac system settings as follows
 One-line installation:
 
 ```bash
-curl -s https://raw.githubusercontent.com/js4jiang5/BatteryOptimizer_for_Mac/main/setup.sh | bash
+curl -s https://raw.githubusercontent.com/brookqin/BatteryOptimizer/main/setup.sh | bash
 ```
 
 This will:
