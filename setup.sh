@@ -167,7 +167,7 @@ if [[ $(smc -k BCLM -r) == *"no data"* ]]; then # sleepwatcher only required for
 	else
 		if [[ -z $(which sleepwatcher 2>&1) ]]; then
 			echo "[ 10 ] Install sleepwatcher"
-			HOMEBREW_NO_INSTALL_FROM_API=1 brew reinstall sleepwatcher
+			brew reinstall sleepwatcher
 			if [[ -z $(which sleepwatcher 2>&1) ]]; then
 				echo "Error: sleepwatcher installation fail"
 				sleepwatcher_installed=false
