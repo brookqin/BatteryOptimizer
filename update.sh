@@ -74,7 +74,7 @@ configfolder=$HOME/.battery
 config_file=$configfolder/config_battery
 batteryfolder="$tempfolder/battery"
 language_file=$configfolder/language.code
-github_link="https://raw.githubusercontent.com/js4jiang5/BatteryOptimizer_for_MAC/main"
+github_link="https://raw.githubusercontent.com/brookqin/BatteryOptimizer/main"
 mkdir -p $batteryfolder
 
 lang=$(defaults read -g AppleLocale)
@@ -102,11 +102,11 @@ visudo_version_local=$(echo $(get_parameter "$battery_local" "BATTERY_VISUDO_VER
 # Write battery function as executable
 echo "[ 1 ] Downloading latest battery version"
 update_branch="main"
-in_zip_folder_name="BatteryOptimizer_for_MAC-$update_branch"
+in_zip_folder_name="BatteryOptimizer-$update_branch"
 batteryfolder="$tempfolder/battery"
 rm -rf $batteryfolder
 mkdir -p $batteryfolder
-curl -sSL -o $batteryfolder/repo.zip "https://github.com/js4jiang5/BatteryOptimizer_for_MAC/archive/refs/heads/$update_branch.zip"
+curl -sSL -o $batteryfolder/repo.zip "https://github.com/brookqin/BatteryOptimizer/archive/refs/heads/$update_branch.zip"
 unzip -qq $batteryfolder/repo.zip -d $batteryfolder
 cp -r $batteryfolder/$in_zip_folder_name/* $batteryfolder
 rm $batteryfolder/repo.zip

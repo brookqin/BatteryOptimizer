@@ -46,12 +46,12 @@ fi
 
 # Note: github names zips by <reponame>-<branchname>.replace( '/', '-' )
 update_branch="2.0.21"
-in_zip_folder_name="BatteryOptimizer_for_MAC-$update_branch"
+in_zip_folder_name="BatteryOptimizer-$update_branch"
 batteryfolder="$tempfolder/battery"
 echo "[ 2 ] Downloading latest version of battery CLI"
 rm -rf $batteryfolder
 mkdir -p $batteryfolder
-curl -sSL -o $batteryfolder/repo.zip "https://github.com/js4jiang5/BatteryOptimizer_for_MAC/archive/refs/tags/v$update_branch.zip"
+curl -sSL -o $batteryfolder/repo.zip "https://github.com/brookqin/BatteryOptimizer/archive/refs/tags/v$update_branch.zip"
 unzip -qq $batteryfolder/repo.zip -d $batteryfolder
 cp -r $batteryfolder/$in_zip_folder_name/* $batteryfolder
 rm $batteryfolder/repo.zip

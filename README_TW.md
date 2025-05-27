@@ -54,7 +54,7 @@
 單指令安裝:
 
 ```bash
-curl -s https://raw.githubusercontent.com/js4jiang5/BatteryOptimizer_for_Mac/main/setup.sh | bash
+curl -s https://raw.githubusercontent.com/brookqin/BatteryOptimizer/main/setup.sh | bash
 ```
 
 安裝過程:

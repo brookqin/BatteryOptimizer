@@ -27,7 +27,7 @@ schedule_path=$HOME/Library/LaunchAgents/battery_schedule.plist
 shutdown_path=$HOME/Library/LaunchAgents/battery_shutdown.plist
 daily_log=$configfolder/daily.log
 calibrate_log=$configfolder/calibrate.log
-github_link="https://raw.githubusercontent.com/js4jiang5/BatteryOptimizer_for_MAC/main"
+github_link="https://raw.githubusercontent.com/brookqin/BatteryOptimizer/main"
 
 ## ###############
 ## Housekeeping
@@ -140,7 +140,7 @@ Usage:
 
 # Visudo instructions
 visudoconfig="
-# Visudo settings for the battery utility installed from https://github.com/js4jiang5/BatteryOptimizer_for_MAC
+# Visudo settings for the battery utility installed from https://github.com/brookqin/BatteryOptimizer
 # intended to be placed in $visudo_file on a mac
 Cmnd_Alias      BATTERYOFF = $binfolder/smc -k CH0B -w 02, $binfolder/smc -k CH0C -w 02, $binfolder/smc -k CH0B -r, $binfolder/smc -k CH0C -r
 Cmnd_Alias      BATTERYON = $binfolder/smc -k CH0B -w 00, $binfolder/smc -k CH0C -w 00
@@ -1182,9 +1182,9 @@ if [[ "$action" == "update" ]]; then
 	# fetch latest battery.sh
 
 	if [[ "$setting" == "beta" ]]; then
-		github_link="https://raw.githubusercontent.com/js4jiang5/BatteryOptimizer_for_MAC/refs/heads/$subsetting"
+		github_link="https://raw.githubusercontent.com/brookqin/BatteryOptimizer/refs/heads/$subsetting"
 	else
-		github_link="https://raw.githubusercontent.com/js4jiang5/BatteryOptimizer_for_MAC/main"
+		github_link="https://raw.githubusercontent.com/brookqin/BatteryOptimizer/main"
 	fi
 	battery_new=$(echo $(curl -sSL "$github_link/battery.sh"))
 	battery_new_version=$(echo $(get_parameter "$battery_new" "BATTERY_CLI_VERSION") | tr -d \")
